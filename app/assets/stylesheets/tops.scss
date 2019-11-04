@@ -1,0 +1,119 @@
+// Place all the styles related to the tops controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSlHgwYqBSIvSevBRSt_TOlVYuj8dMmZYhKA4FD9jYlAjG_Pe1q') no-repeat;
+  background-size: cover;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 12px 30px;
+  background-color: #E06464;
+  box-shadow: 0px 5px #BB4B4B;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 0.8em;
+}
+
+.btn:active {
+  position: relative;
+  top: 5px;
+  box-shadow: none;
+}
+
+#welcome-wrapper {
+  margin-top: 210px;
+  width: 100%;
+  text-align: center;
+}
+
+#welcome-btn {
+  margin: 0 auto;
+  width: 200px;
+  text-align: center;
+}
+
+#welcome-wrapper h1 {
+  font-size: 3em;
+  color: #42434E;
+}
+
+/*モーダル*/
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 14%;
+  left: 34%;
+  background-color: #fff;
+  padding: 20px 20px 40px;
+  border-radius: 10px;
+  width: 380px;
+  height: 300px;
+  text-align: center;
+}
+
+#image-wrapper {
+  margin: 25px auto;
+  width: 240px;
+  height: 100px;
+  margin-bottom: 50px;
+}
+
+#image-wrapper img {
+  width: 120px;
+}
+
+#description-wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+#description {
+  font-size: 1em;
+  margin-top: 34px;
+  margin-bottom: 40px;
+}
+
+#description-wrapper #more-text  {
+  display: none;
+}
+
+#read-more {
+  color: white;
+  width: 200px;
+  margin: 30px auto;
+  padding: 10px 0;
+  border-radius: 3px;
+  background-color: #2ABC8F;
+  text-align: center;
+  cursor: pointer;
+}
+
+.kids_family {
+  display: block;
+  width: 220px;
+  margin: 0 auto;
+  height: 180px;
+  margin-bottom: 20px;
+}
+
+#start-wrapper {
+  display: none;
+  text-align: center;
+}
+
+#start {
+  margin: 30px auto;
+  width: 200px;
+}

@@ -1,0 +1,89 @@
+// Place all the styles related to the shots controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.header{
+  width: 100%;
+  padding: 28px 0 10px;
+  box-shadow: 4px 4px 3px rgba(0,0,0,0.5), inset 0 0 20px 2px yellow ;
+}
+
+.logo{
+  width: 225px;
+  height: 56px;
+  margin: 0 auto;
+  font-family: impact;
+  letter-spacing: 10px;
+  font-size: 40px;
+}
+
+.wrapper{
+  width: 1470px;
+  margin: 30px auto 40px;
+  border-style: solid;
+  height: 1500px;
+}
+
+.main{
+  display: block;
+  float: left;
+  width: 940px;
+  border-style: solid;
+  height: 1170px;
+  margin: 10px;
+}
+
+.profile{
+  display: block;
+  float: left;
+  width: 400px;
+  border-style: solid;
+  height: 630px;
+  margin: 10px;
+}
+
+.baby{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.article{
+  display: block;
+  float: right;
+  width: 490px;
+  border-style: solid;
+  height: 900px;
+  margin: 10px;
+}
+
+.name{
+  text-align: center;
+}
+
+.articles{
+  text-align: center;
+}
+
+.sidemenu{
+  float: right;
+  width: 480px;
+  border-style: solid;
+  height: 430px;
+  margin: 10px;
+  background-color: white;
+}
+
+.footer{
+  width: 100%;
+  border-style: solid;
+  height: 100px;
+}
+
+.bottom{
+  clear: both;
+  height: 30px;
+}
+
+#calendar{
+  padding: 10px;
+}

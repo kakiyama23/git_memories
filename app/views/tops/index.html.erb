@@ -1,0 +1,37 @@
+<body>
+  <header class="header">
+    <h1 class="logo">Memories</h1>
+  </header>
+  <div id="welcome-wrapper">
+    <h1>子育て記録サイト！</h1>
+    <div class="btn" id="welcome-btn">スタート</div>
+  </div>
+  
+  <div class="modal-wrapper">
+    <div class="modal">
+      <div id="image-wrapper">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTknhynl59XQMh2DPZuZScZAQB26FnTv4TeYdjigv5hBrddacTG" class="ninja-image" id="ninja-image"/>
+      </div>
+      <div id="description-wrapper">
+        <div id = "description">Memoriesへようこそ！<br>
+          Memoriesは<span class="important">子育て記録</span>サイトです。<br>
+          <div id="more-text">
+            <p>
+              Memoriesを使えば、お子様の毎日に成長を<br>記録することができます。
+            </p>
+            <p>ぜひMemoriesを使ってみませんか？</p>
+            <div class="btn" id="start">さっそくMemoriesを使う</div>
+          </div>
+        </div>
+        <div id="read-more">続きを読む</div>
+      </div>
+      <div id="start-wrapper">
+        <h1>思い出を記録しよう！</h1>
+       <img src="http://news.p-mom.net/wp-content/uploads/2016/11/148711.jpg" class="kids_family">
+       <%= link_to"始める", shots_path, class: 'btn begin'  %> 
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
