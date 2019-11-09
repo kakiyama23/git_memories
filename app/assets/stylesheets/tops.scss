@@ -6,6 +6,24 @@ body {
   background-size: cover;
 }
 
+.header-right{
+   cursor: pointer;
+  padding: 12px 30px;
+  background-color: #E06464;
+  box-shadow: 0px 5px #BB4B4B;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 0.8em;
+  float: right;
+  margin-right: 45px;
+}
+
+.header-right:active{
+  position: relative;
+  top: 5px;
+  box-shadow: none;
+}
+
 .btn {
   cursor: pointer;
   padding: 12px 30px;
@@ -22,6 +40,20 @@ body {
   box-shadow: none;
 }
 
+.answer{
+  display: none;
+}
+
+.faq-list-item{
+  margin: 30px;
+  width: 35%;
+  margin: 0 auto;
+  background-color: pink;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+  border-style: dashed;
+}
+
 #welcome-wrapper {
   margin-top: 210px;
   width: 100%;
@@ -32,6 +64,7 @@ body {
   margin: 0 auto;
   width: 200px;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 #welcome-wrapper h1 {

@@ -1,10 +1,18 @@
 <body>
   <header class="header">
+     <div class="header-right">
+    <%= link_to "ログイン", new_user_session_path %>
+    </div>
     <h1 class="logo">Memories</h1>
   </header>
   <div id="welcome-wrapper">
     <h1>子育て記録サイト！</h1>
     <div class="btn" id="welcome-btn">スタート</div>
+    
+    <div class="faq-list-item">
+    <p class="question">このサイトの対象年齢は。。。<span class="plus">+</span></p>
+    <p class="answer">０歳から３歳です</p>
+    </div>
   </div>
   
   <div class="modal-wrapper">
@@ -28,7 +36,7 @@
       <div id="start-wrapper">
         <h1>思い出を記録しよう！</h1>
        <img src="http://news.p-mom.net/wp-content/uploads/2016/11/148711.jpg" class="kids_family">
-       <%= link_to"始める", shots_path, class: 'btn begin'  %> 
+       <%= link_to"始める", new_user_registration_path, class: 'btn begin'  %> 
       </div>
     </div>
   </div>

@@ -1,6 +1,8 @@
 <body>
   <header class="header">
-    <h1 class="logo">Memories</h1>
+    <div class="header-right"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></div>
+    <div class="header-right"><%= link_to "プロフィール編集", edit_user_path(current_user) %></div>
+    <h1 class="logo"><%= current_user.nickname %>の思い出！</h1>
   </header>
     <div class="wrapper">
       
@@ -8,14 +10,49 @@
         <div class="profile">
           <h2 class="name">プロフィール</h2>
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQna_3E15mNbH4_1fXU5PopvqI98ww4dKjf72Gas48RCNTBHRoF" class="baby">
+          <div class="names">
+          <h2><span>お名前：</span><%= current_user.name %></h2>
+          <h2><span>ふりがな：</span><%= current_user.name_kana %></h2>
+          <h2><span>ニックネーム：</span><%= current_user.nickname %></h2>
+          <h2><span>お誕生日：</span><%= current_user.birthday %></h2>
+          <h2><span>性別：</span><%= current_user.gender %></h2>
+          <h2><span>生まれてから：</span><%= @day %><span>日目</span></h2>
+          </div>
         </div>
+        
+        
         <div class="article">
-          <h2 class="articles">思い出一覧</h2>
+          <h1 class="articles">思い出一覧</h1>
+          <%= link_to "新規登録", new_shot_path, class: 'btns' %>
+          <div class="bottom"></div>
+        <% @shots.each do |shot| %>
+        <hr>
+        <% if shot.image.attached? %>
+        <div class="image-tag"><%= image_tag shot.image, :size => '150x170' %></div>
+         <% end %>
+        <p class="shot-date"><%= shot.date %></p>
+        <h3 class="shot-titles"><%= shot.title %></h3>
+        <div class="bottom"></div>
+        <% end %>
+        <%= paginate(@shots) %>
         </div>
+        
+        
+        <div class="new-articles">
+          <h2 class="name">最新の思い出一覧</h2>
+            <% @shotss.each.with_index(1) do |shot, i| %>
+            <p class="new-names"><span><%= i %>. </span><%= shot.title %></p>
+            <% end %>
+          </h3>
+        </div>
+        
       </main>
       
         <div class="sidemenu">
           <div id="calendar"></div>
+          <div class="information">
+            <h2 class="informations">子育て情報</h2>
+          </div>
         </div>
         
     </div>
