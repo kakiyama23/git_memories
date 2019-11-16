@@ -21,16 +21,23 @@ $(document).ready(function(){
     
 $('.faq-list-item').click(function(){
     var $answer = $(this).find('.answer');
+    var $plus = $(this).find('.plus');
     if($answer.hasClass('open')){
       $answer.removeClass('open');
       $answer.slideUp();
-      $('.plus').text('＋');
+      $plus.text('＋');
     } else {
       $answer.addClass('open');
       $answer.slideDown();
-      $('.plus').text('－');
+      $plus.text('－');
     }
     });
+    
+$('.index-btn').click(function(){
+  var active = $('.index-btn').index($(this));
+  $('.active').removeClass('active');
+  $('.baby').eq(active).addClass('active');
+});
   
   
   

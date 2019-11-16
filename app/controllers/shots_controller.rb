@@ -4,6 +4,7 @@ class ShotsController < ApplicationController
       @shotss = Shot.all.order("created_at DESC")
       @user = current_user
       @day = (Date.today - current_user.birthday).to_i
+      @products = Product.all
    end
    
    def new
@@ -12,6 +13,26 @@ class ShotsController < ApplicationController
    
    def create
      Shot.create(create_params)
+   end
+   
+   def edit
+      @shot = Shot.find(params[:id])
+   end
+   
+   def update
+      @shot = Shot.find(params[:id])
+      @shot.update(create_params)
+      redirect_to "/shots/#{params[:id]}"
+   end
+   
+   def show
+    @shot = Shot.find(params[:id])
+   end
+
+   def destroy
+      shot = Shot.find(params[:id])
+      shot.destroy
+      redirect_to controller: :shots, action: :index
    end
    
    private
