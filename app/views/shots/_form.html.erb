@@ -1,0 +1,29 @@
+<%= form_for shot do |f| %>
+  <div class="col-lg-6">
+    <h2>投稿日時</h2>
+    <%= f.datetime_select :date, class: "form-control" %>
+  </div>
+  
+  <div class="col-lg-6">
+    <h2>タイトル</h2>
+    <%= f.text_area :title, placeholder: 'タイトル', style: 'width: 35%; height: 50px;', class: "form-control" %>
+  </div>
+      
+  <div class="col-lg-6">
+    <h2>今日の１枚！</h2>
+    <%= f.file_field :image, class: "floating-label" %>
+  </div>
+  
+  <div class="col-lg-6">
+    <h2>出来事！！</h2>
+    <%= f.text_area :text,placeholder: 'いろんな出来事を書いてみよう',style: 'width: 70%; height: 300px;', class:"box" %>
+  </div>
+  
+  <div class="form-group">
+    <%= button_tag type: "submit", class: "btn" do %>
+        投稿する<i class="icon-arrow-right"></i>
+    <% end %>
+  </div>
+<% end %>
+  
+  <%= link_to "戻る", shots_path %>

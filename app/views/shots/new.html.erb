@@ -2,35 +2,21 @@
   <header class="header">
     <h1 class="logo">Memories</h1>
   </header>
-
+  
+  <div id ="error_explanation">
+   <% if @shot.errors.present? %>
+    <h2 class="error-count"><%= @shot.errors.count %>件のエラーがあります</h2>
+    <ul>
+      <% @shot.errors.full_messages.each do |message| %>
+      <p><%= message %></p>
+      <% end %>
+    </ul>
+  <% end %>
+  </div>
+  
   <h1 class="form">新規投稿</h1>
   <div class="row form">
   <div class="col-lg-12">
-  <%= form_for [@shot] do |f| %>
-  <div class="form-group">
-  <div class="col-lg-6">
-    <h2>投稿日時</h2>
-    <%= f.datetime_select :date, class: "form-control" %>
-  </div>
-  <div class="col-lg-6">
-    <h2>タイトル</h2>
-    <%= f.text_area :title, placeholder: 'タイトル', style: 'width: 35%; height: 50px;', class: "form-control" %>
-  </div>
-      
-  <div class="form-group">
-  <div class="col-lg-6">
-  <h2>今日の１枚！</h2>
-  <%= f.file_field :image, class: "floating-label" %>
-  </div>
-   <div class="col-lg-6">
-    <h2>出来事！！</h2>
-  <%= f.text_area :text,placeholder: 'いろんな出来事を書いてみよう',style: 'width: 70%; height: 300px;', class:"box" %>
-  </div>
-  <div class="form-group">
-    <%= button_tag type: "submit", class: "btn" do %>
-        投稿する<i class="icon-arrow-right"></i>
-    <% end %>
-  </div>
-    <% end %>
-    <%= link_to "戻る", shots_path %>
+  <%= render partial: 'form', locals: { shot: @shot } %> 
+
 </body>

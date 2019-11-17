@@ -24,7 +24,7 @@
           <h2><span > お名前：</span><%= current_user.name %></h2>
           <h2><span > ふりがな：</span><%= current_user.name_kana %></h2>
           <h2><span > ニックネーム：</span><%= current_user.nickname %></h2>
-          <h2><span > お誕生日：</span><%= current_user.birthday %></h2>
+          <h2><span > お誕生日：</span><%= current_user.birthday.strftime("%Y年%m月%d日")  %></h2>
           <h2><span > 性別：</span><%= current_user.gender %></h2>
           <h2><span > 生まれてから：</span><%= @day %><span>日目</span></h2>
           </div>

@@ -12,7 +12,12 @@ class ShotsController < ApplicationController
    end
    
    def create
-     Shot.create(create_params)
+    @shot=Shot.new(create_params)
+    if @shot.save
+        redirect_to controller: :shots, action: :index
+    else
+       render 'new'
+    end
    end
    
    def edit
@@ -35,6 +40,7 @@ class ShotsController < ApplicationController
       redirect_to controller: :shots, action: :index
    end
    
+ 
    private
    
    def create_params
